@@ -72,14 +72,80 @@
             font-size: 1.4rem;
         }
         &__icon {
-                opacity: .6;
-                &:hover {
-                    opacity: 1;
-                    color: $primary-clr;
-                }  
-            }
+            opacity: .6;
+            &:hover {
+                opacity: 1;
+                color: $primary-clr;
+            }  
+        }
         &__txt {
             font-weight: 600;
         }
-        }
     }
+}
+
+.resto {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #f6f6f6;
+    & h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    & .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        & .card {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 1.6rem;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            position: relative;
+            & .card__head {
+                width: 100%;
+                height: 200px;
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 1.6rem 1.6rem 0 0;
+                }
+            }
+            & .card__body {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 1.4rem;
+                &__desc {
+                    padding: 1.6rem 0;
+                    & > * {
+                        padding-block: .1rem;
+                    }
+                    & p {
+                        margin: 0;
+                    }
+                }
+                &__icon {
+                    align-self: center;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: #000000;
+                }
+            }
+        }
+            & .card--new {
+                &::before {
+                content: "Nouveau";
+                position: absolute;
+                width: 100px;
+                padding: 1rem;
+                text-align: center;
+                font-weight: bold;
+                border-radius: .4rem;
+                background-color: $tertiary-clr;
+                top: 15px;
+                right: 15px;
+            }
+        } 
+    }
+}

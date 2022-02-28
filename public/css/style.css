@@ -135,4 +135,68 @@ a {
   font-weight: 600;
 }
 
+.resto {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #f6f6f6;
+}
+.resto h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.resto .card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.resto .card-container .card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1.6rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: relative;
+}
+.resto .card-container .card .card__head {
+  width: 100%;
+  height: 200px;
+}
+.resto .card-container .card .card__head img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.6rem 1.6rem 0 0;
+}
+.resto .card-container .card .card__body {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.4rem;
+}
+.resto .card-container .card .card__body__desc {
+  padding: 1.6rem 0;
+}
+.resto .card-container .card .card__body__desc > * {
+  padding-block: 0.1rem;
+}
+.resto .card-container .card .card__body__desc p {
+  margin: 0;
+}
+.resto .card-container .card .card__body__icon {
+  align-self: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
+}
+.resto .card-container .card--new::before {
+  content: "Nouveau";
+  position: absolute;
+  width: 100px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  background-color: #99E2D0;
+  top: 15px;
+  right: 15px;
+}
+
 /*# sourceMappingURL=style.css.map */
