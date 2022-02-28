@@ -17,7 +17,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #f6f6f6;
-    padding: 4rem;
+    padding: 3.4rem;
     &__txt {
         text-align: center;
         & p {
@@ -30,3 +30,56 @@
         }
     }
 }
+
+.guides {
+    padding: 2rem;
+    & h1 {
+        font-size: 3rem;
+        margin-block: 4rem;
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-inline: 1rem;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 3rem 0;
+        position: relative;
+        border-radius: 2rem;
+        background-color: rgba($color: #bdbbbb, $alpha: .1);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        &:hover {
+            background-color: rgba($color: $primary-clr, $alpha: .1);
+        }
+        &__circle {
+            position: absolute;
+            top: 50%;
+            left: -13px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-50%);
+            background-color: $primary-clr;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            font-size: 1.4rem;
+        }
+        &__icon {
+                opacity: .6;
+                &:hover {
+                    opacity: 1;
+                    color: $primary-clr;
+                }  
+            }
+        &__txt {
+            font-weight: 600;
+        }
+        }
+    }
