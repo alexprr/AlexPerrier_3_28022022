@@ -11,3 +11,22 @@
         font-size: 2rem;
     }
 }
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 4rem;
+    &__txt {
+        text-align: center;
+        & p {
+            font-size: 2rem;
+            font-weight: 300;
+            margin: 1.4rem 0;
+        }
+        & h1 {
+            font-size: 3rem;
+        }
+    }
+}
