@@ -29,9 +29,13 @@ a {
 
 .primary-btn {
   padding: 1.6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
   border-radius: 3rem;
   font-weight: 500;
+  width: 220px;
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   color: #fff;
@@ -39,6 +43,12 @@ a {
 .primary-btn:hover {
   opacity: 0.8;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.primary-btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
