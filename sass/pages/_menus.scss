@@ -23,16 +23,20 @@
         font-size: 2rem;
     }
     &__starter {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        
     }
 }
-    .starter__title {
-        position: relative;
-        text-transform: uppercase;
-        font-weight: 400;
-        margin-top: 1.6rem;
+
+.dishes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+        &__title {
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin-top: 1.6rem;
         &::after {
             content: "";
             position: absolute;
@@ -43,32 +47,36 @@
             background: $tertiary-clr;
             }
         }
-
-    .starter__menu {
-        background-color: #fff;
-        border-radius: 1rem;
-        padding: 0 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
-        &__desc > * {
-            margin: 0;
+        &__menu {
+            background-color: #fff;
+            border-radius: 1rem;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+                &__desc > * {
+                    margin: 0;
+                }
+                &__desc p {
+                    margin-top: .2rem;
+                }
+                &__desc,
+                &__price {
+                    padding: 1rem 0;
+                }
+                &__price {
+                    align-self: flex-end;
+                }
+            }
         }
-        &__desc p {
-            margin-top: .2rem;
-        }
-        &__desc,
-        &__price {
-            padding: 1rem 0;
-        }
-        &__price {
-            align-self: flex-end;
-        }
-    }
- 
+    
 
 .order-btn {
     @include flex-center();
     margin-top: 2rem;
 }
+
+.order-btn .btn {
+   padding: 1.2rem 3rem;
+}   
