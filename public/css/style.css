@@ -56,7 +56,7 @@ a {
 
 .footer {
   background: rgba(0, 0, 0, 0.8);
-  padding: 2rem;
+  padding: 1rem;
   color: #fff;
 }
 .footer__img {
@@ -68,13 +68,26 @@ a {
   padding: 0.6rem 0;
 }
 .footer .icon-link {
-  display: inline-block;
-  width: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .footer .accent-link {
   font-weight: 600;
 }
 
+@media (min-width: 769px) {
+  .footer__container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .img__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .location {
   display: flex;
   justify-content: center;

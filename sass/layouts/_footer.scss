@@ -1,6 +1,6 @@
 .footer {
     background: rgba($color: #000000, $alpha: .8);
-    padding: 2rem;
+    padding: 1rem;
     color: #fff;
     &__img {
         filter: contrast(1) invert(1);
@@ -11,10 +11,21 @@
         padding: .6rem 0;
     }
     & .icon-link {
-        display: inline-block;
-        width: 20px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
     & .accent-link {
         font-weight: 600;
+    }
+}
+
+@media (min-width: 769px) {
+    .footer__container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .img__container {
+        @include flex-center();
     }
 }
