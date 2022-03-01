@@ -46,12 +46,18 @@ a {
   align-items: center;
   padding: 1rem;
   z-index: 10;
+  position: relative;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
 }
 .header__title {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
   font-size: 2.25rem;
+}
+.header__icon {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
 }
 
 .footer {
@@ -317,59 +323,71 @@ a {
   object-fit: cover;
 }
 
-.menu {
-  background-color: #f6f6f6;
+.palette {
+  max-width: 1440px;
+  margin: 0 auto;
   position: relative;
   margin-top: -80px;
+  background-color: #f6f6f6;
   border-radius: 3rem 3rem 0 0;
 }
-.menu__title {
+.palette__wrapper {
+  padding: 2rem 1rem;
+}
+.palette__title {
   font-family: "Shrikhand";
   font-weight: 400;
+  font-size: 2rem;
 }
-.menu__title__container {
+.palette__starter {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
+  flex-direction: column;
+  gap: 1rem;
 }
-.menu .starter {
-  padding: 1rem 2rem;
-}
-.menu .starter__title {
+
+.starter__title {
   position: relative;
   text-transform: uppercase;
-  font-size: 1.6rem;
   font-weight: 400;
+  margin-top: 1.6rem;
 }
-.menu .starter__title::after {
+.starter__title::after {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 3px;
-  top: 22px;
+  width: 65px;
+  height: 4px;
+  top: 28px;
   left: 1px;
   background: #99E2D0;
 }
-.menu .starter__card__container {
-  display: flex;
-  flex-direction: column;
-}
-.menu .starter__card {
+
+.starter__menu {
   background-color: #fff;
+  border-radius: 1rem;
+  padding: 0 1rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 2rem;
-  padding: 1rem;
-  border-radius: 1.6rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.menu .starter__card__txt {
-  overflow: hidden;
+.starter__menu__desc > * {
+  margin: 0;
 }
-.menu .starter__card p {
-  margin: 0.4rem 0 0 0;
+.starter__menu__desc p {
+  margin-top: 0.2rem;
+}
+.starter__menu__desc, .starter__menu__price {
+  padding: 1rem 0;
+}
+.starter__menu__price {
+  align-self: flex-end;
+}
+
+.order-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

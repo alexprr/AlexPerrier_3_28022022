@@ -11,68 +11,101 @@
 </head>
 
 <body>
-    <header class="header header-menu">
-        <a href="index.html" class="header__icon"><i class="fas fa-arrow-left fa-lg"></i></a>
-        <img src="public/assets/images/logo/ohmyfood@2x.svg" alt="" class="header__logo">
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <a href="index.html">
+                <i class="header__icon fas fa-arrow-left fa-xl"></i>
+                <h1 class="header__title">ohmyfood</h1>
+            </a>
+        </div>
     </header>
 
-    <div class="background">
-        <img src="public/assets/images/restaurants/la-palette-du-gout.jpg" alt="" class="background__img">
-    </div>
-
-    <section class="menu">
-        <div class="menu__title__container">
-            <h1 class="menu__title">La palette du goût</h1>
-            <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
+    <!-- Main Content -->
+    <main>
+        <!-- Background Image -->
+        <div class="background">
+            <img src="public/assets/images/restaurants/la-palette-du-gout.jpg" alt="" class="background__img">
         </div>
 
-        <div class="starter">
-            <h2 class="starter__title">
-                Entrées
-            </h2>
-            <div class="starter__card__container">
-                <div class="starter__card">
-                    <div class="starter__card__txt">
-                        <h3>Fricassée d'escargot</h3>
-                        <p>Au piment d'espelette</p>
+        <section class="palette">
+            <div class="palette__wrapper">
+                <h2 class="palette__title">La palette du goût</h2>
+
+
+                <div class="palette__starter">
+                    <h3 class="starter__title">Entrées</h3>
+
+                    <div class="starter__menu">
+                        <div class="starter__menu__desc">
+                            <h4 class="starter__menu__title">Fricassée d'escargot</h4>
+                            <p>Au piment d'espelette</p>
+                        </div>
+                        <div class="starter__menu__price">
+                            <strong>25€</strong>
+                        </div>
                     </div>
-                    <strong>25€</strong>
-                    <div class="starter--checked">
-                        <i class="fa-solid fa-check"></i>
+                    <div class="starter__menu">
+                        <div class="starter__menu__desc">
+                            <h4 class="starter__menu__title">Fricassée d'escargot</h4>
+                            <p>Au piment d'espelette</p>
+                        </div>
+                        <div class="starter__menu__price">
+                            <strong>25€</strong>
+                        </div>
                     </div>
-                </div>
-                <div class="starter__card">
-                    <div class="starter__card__txt">
-                        <h3>Foie gras de canard mi-cuit</h3>
-                        <p>Et ses copeaux de truffe noire</p>
-                    </div>
-                    <strong>35€</strong>
-                    <div class="starter--checked">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                </div>
-                <div class="starter__card">
-                    <div class="starter__card__txt">
-                        <h3>Oeuf au plat</h3>
-                        <p>Assaisonné à la truffe sur lit de caviar</p>
-                    </div>
-                    <strong>20€</strong>
-                    <div class="starter--checked">
-                        <i class="fa-solid fa-check"></i>
+                    <div class="starter__menu">
+                        <div class="starter__menu__desc">
+                            <h4 class="starter__menu__title">Fricassée d'escargot</h4>
+                            <p>Au piment d'espelette</p>
+                        </div>
+                        <div class="starter__menu__price">
+                            <strong>25€</strong>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-
-        <div class="primary-btn-box">
-            <a href="#">
-                <div class="primary-btn">
+        <!-- Bouton -->
+        <div class="order-btn">
+            <a href="#resto">
+                <div class="btn">
                     Commander
                 </div>
             </a>
         </div>
-    </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="img__container">
+            <img src="public/assets/images/logo/ohmyfood.png" alt="" class="footer__img">
+        </div>
+        <div class="footer__container">
+            <div class="footer__row">
+                <a class="icon-link" href="#">
+                    <i class="fas fa-utensils fa-sm"></i>
+                    <span class="accent-link">Proposer un restaurant</span>
+                </a>
+            </div>
+            <div class="footer__row">
+                <a class="icon-link" href=""><i class="fas fa-handshake-angle fa-sm"></i>
+                    <span class="accent-link">Devenir partenaire</span>
+                </a>
+            </div>
+            <div class="footer__row">
+                <a href="#">
+                    <span>Mentions légales</span>
+                </a>
+            </div>
+            <div class="footer__row">
+                <a href="mailto:alexperrier.pro@gmail.com">
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
