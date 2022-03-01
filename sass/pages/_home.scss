@@ -19,7 +19,7 @@
     &__box {
         @include flex-center();
         flex-direction: column;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.125rem;
     }
     &__title {
         max-width: 300px;
@@ -32,47 +32,49 @@
 }
 
 .guides {
-    padding: 2rem;
-    & h1 {
-        font-size: 3rem;
-        margin-block: 4rem;
+    margin-top: 1.25rem;
+    padding: 1rem;
+    & h2 {
+        font-size: $h2;
+        margin-bottom: 2rem;
     }
     &__box {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        margin-inline: 1rem;
+        gap: 1.5rem;
+        margin-inline: .6rem;
     }
     &__item {
         display: flex;
-        justify-content: center;
-        gap: 2rem;
-        padding: 3rem 0;
+        gap: 1rem;
+        padding: 2rem 0;
         position: relative;
         border-radius: 2rem;
-        background-color: rgba($color: #bdbbbb, $alpha: .1);
+        background-color: rgba(#bdbbbb, .1);
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        &:hover {
-            background-color: rgba($color: $primary-clr, $alpha: .1);
-        }
+            &:hover {
+                background-color: rgba($primary-clr, .1);
+                cursor: pointer;
+                transition: .4s;
+                box-shadow: rgba(0, 0, 0, .8) 0px 2px 8px 0px;
+            }
         &__circle {
             position: absolute;
             top: 50%;
             left: -13px;
             width: 30px;
             height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-center();
             transform: translateY(-50%);
             background-color: $primary-clr;
             color: white;
-            padding: 1rem;
+            padding: .6rem;
             border-radius: 50%;
-            font-size: 1.4rem;
+            font-size: 1rem;
         }
         &__icon {
             opacity: .6;
+            margin-left: 2.25rem;
             &:hover {
                 opacity: 1;
                 color: $primary-clr;

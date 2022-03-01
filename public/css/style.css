@@ -102,7 +102,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.125rem;
 }
 .hero__title {
   max-width: 300px;
@@ -114,23 +114,23 @@ a {
 }
 
 .guides {
-  padding: 2rem;
+  margin-top: 1.25rem;
+  padding: 1rem;
 }
-.guides h1 {
-  font-size: 3rem;
-  margin-block: 4rem;
+.guides h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
 }
 .guides__box {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-inline: 1rem;
+  gap: 1.5rem;
+  margin-inline: 0.6rem;
 }
 .guides__item {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 3rem 0;
+  gap: 1rem;
+  padding: 2rem 0;
   position: relative;
   border-radius: 2rem;
   background-color: rgba(189, 187, 187, 0.1);
@@ -138,6 +138,9 @@ a {
 }
 .guides__item:hover {
   background-color: rgba(147, 86, 220, 0.1);
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 8px 0px;
 }
 .guides__item__circle {
   position: absolute;
@@ -146,17 +149,18 @@ a {
   width: 30px;
   height: 30px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   transform: translateY(-50%);
   background-color: #9356DC;
   color: white;
-  padding: 1rem;
+  padding: 0.6rem;
   border-radius: 50%;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 .guides__item__icon {
   opacity: 0.6;
+  margin-left: 2.25rem;
 }
 .guides__item__icon:hover {
   opacity: 1;
