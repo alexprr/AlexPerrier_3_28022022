@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 *,
 *::before,
@@ -129,7 +128,9 @@ a {
 }
 .guides__item {
   display: flex;
+  align-items: center;
   gap: 1rem;
+  flex: 1;
   padding: 2rem 0;
   position: relative;
   border-radius: 2rem;
@@ -172,7 +173,7 @@ a {
 
 .resto {
   margin-top: 4rem;
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 4rem 1rem 2rem 1rem;
   background-color: #f6f6f6;
 }
 .resto h1 {
@@ -181,9 +182,9 @@ a {
 }
 .resto .card-container {
   display: flex;
-  width: 100ù;
+  width: 100%;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.8rem;
   margin-bottom: 4rem;
 }
 .resto .card-container .card {
@@ -232,19 +233,36 @@ a {
 .resto .card-container .card--new::before {
   content: "Nouveau";
   position: absolute;
+  top: 15px;
+  right: 15px;
   width: 100px;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
   font-weight: bold;
   border-radius: 0.4rem;
   background-color: #99E2D0;
-  top: 15px;
-  right: 15px;
+  color: #278870;
 }
 
-@media (min-width: 426px) {
-  .card {
-    width: 25%;
+@media (min-width: 768px) {
+  .guides__box {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  .guides__item {
+    justify-content: center;
+  }
+
+  .guides__item__icon {
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .guides__box {
+    gap: 2rem;
+    padding: 0 10rem;
   }
 }
 .background {

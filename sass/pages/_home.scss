@@ -46,7 +46,9 @@
     }
     &__item {
         display: flex;
+        align-items: center;
         gap: 1rem;
+        flex: 1;
         padding: 2rem 0;
         position: relative;
         border-radius: 2rem;
@@ -88,7 +90,7 @@
 
 .resto {
     margin-top: 4rem;
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 4rem 1rem 2rem 1rem;
     background-color: #f6f6f6;
     & h1 {
         font-size: 3rem;
@@ -96,9 +98,9 @@
     }
     & .card-container {
         display: flex;
-        width: 100ù;
+        width: 100%;
         flex-direction: column;
-        gap: 2rem;
+        gap: .8rem;
         margin-bottom: 4rem;
         & .card {
             flex: 1 1 auto;
@@ -147,21 +149,47 @@
                 &::before {
                 content: "Nouveau";
                 position: absolute;
+                top: 15px; right: 15px;
                 width: 100px;
-                padding: 1rem;
+                padding: .5rem;
                 text-align: center;
                 font-weight: bold;
                 border-radius: .4rem;
                 background-color: $tertiary-clr;
-                top: 15px;
-                right: 15px;
+                color: darken($tertiary-clr, 40%);
             }
         } 
     }
 }
 
+// MEDIA QUERIES 
+
 @media (min-width: 426px) {
-    .card {
-        width: 25%;
+    .guides__item__txt {
+        // font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .guides__box {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1024px) {
+    .guides__item {
+        justify-content: center;
+    }
+
+    .guides__item__icon {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .guides__box {
+        gap: 2rem;
+        padding: 0 10rem;
     }
 }
