@@ -4,16 +4,13 @@
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-html {
     scroll-behavior: smooth;
-    font-size: 10px;
 }
 
-body {
+body,
+section,
+main {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.6rem;
     margin: 0;
 }
 

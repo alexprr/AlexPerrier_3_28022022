@@ -1,4 +1,4 @@
-.primary-btn {
+.btn {
     @include btn();
     &:hover {
         @include btn--over();

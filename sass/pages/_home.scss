@@ -1,14 +1,11 @@
 .location {
-    display: flex;
-    justify-content: center;
-    gap: 1.6rem;
-    padding: 2rem;
-    background-color: rgba($color: #000000, $alpha: .1);
-    color: rgba($color: #000000, $alpha: .8);
-    font-weight: 500;
-    &__icon,
+    @include flex-center();
+    gap: 1rem;
+    background-color: rgba(#000000, .1);
+    color: rgba(#000000, .7);
     &__city {
-        font-size: 2rem;
+        font-weight: 500;
+        font-size: 1.4rem;
     }
 }
 
@@ -16,18 +13,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2.125rem;
     background-color: #f6f6f6;
-    padding: 3.4rem;
-    &__txt {
-        text-align: center;
-        & p {
-            font-size: 2rem;
-            font-weight: 300;
-            margin: 1.4rem 0;
-        }
-        & h1 {
-            font-size: 3rem;
-        }
+    text-align: center;
+    &__box {
+        @include flex-center();
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+    }
+    &__title {
+        max-width: 300px;
+        font-size: $h2;
+    }
+    &__text {
+        font-size: $large-txt;
+        font-weight: 300;
     }
 }
 
@@ -161,43 +161,5 @@
 @media (min-width: 426px) {
     .card {
         width: 25%;
-    }
-}
-
-
-.test {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lightblue;
-    height: 50vh;
-    & .bloc-1 {
-        width: 10rem;
-        height: 10rem;
-        background-color: rgb(241, 241, 146);
-        position: relative;
-        z-index: 1;
-        &::before {
-
-        }
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
-        }
-        &::after {
-            width: 10rem;
-            height: 10rem;
-            position: absolute;
-            content: "";
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background: linear-gradient(180deg, lighten($primary-clr, 6) 0%, darken($primary-clr,10) 100%);
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
-        }
     }
 }

@@ -4,16 +4,13 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html {
   scroll-behavior: smooth;
-  font-size: 10px;
 }
 
-body {
+body,
+section,
+main {
   font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
   margin: 0;
 }
 
@@ -28,8 +25,8 @@ a {
   color: inherit;
 }
 
-.primary-btn {
-  padding: 1.6rem 2rem;
+.btn {
+  padding: 1.2rem 1.6rem;
   border-radius: 3rem;
   opacity: 1;
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
@@ -37,7 +34,7 @@ a {
   font-weight: 500;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
 }
-.primary-btn:hover {
+.btn:hover {
   cursor: pointer;
   opacity: 0.8;
   transition: 0.3s;
@@ -48,13 +45,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  gap: 2rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 1rem;
+  z-index: 10;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
 }
-
-.header-menu {
-  box-shadow: none;
+.header__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  font-size: 2.25rem;
 }
 
 .footer {
@@ -81,33 +79,38 @@ a {
 .location {
   display: flex;
   justify-content: center;
-  gap: 1.6rem;
-  padding: 2rem;
+  align-items: center;
+  gap: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
 }
-.location__icon, .location__city {
-  font-size: 2rem;
+.location__city {
+  font-weight: 500;
+  font-size: 1.4rem;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2.125rem;
   background-color: #f6f6f6;
-  padding: 3.4rem;
-}
-.hero__txt {
   text-align: center;
 }
-.hero__txt p {
-  font-size: 2rem;
-  font-weight: 300;
-  margin: 1.4rem 0;
+.hero__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
 }
-.hero__txt h1 {
-  font-size: 3rem;
+.hero__title {
+  max-width: 300px;
+  font-size: 1.75rem;
+}
+.hero__text {
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .guides {
@@ -240,38 +243,6 @@ a {
     width: 25%;
   }
 }
-.test {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightblue;
-  height: 50vh;
-}
-.test .bloc-1 {
-  width: 10rem;
-  height: 10rem;
-  background-color: #f1f192;
-  position: relative;
-  z-index: 1;
-}
-.test .bloc-1:hover::after {
-  opacity: 1;
-}
-.test .bloc-1::after {
-  width: 10rem;
-  height: 10rem;
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: linear-gradient(180deg, #a36fe1 0%, #782cd3 100%);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-}
-
 .background {
   height: 350px;
 }
