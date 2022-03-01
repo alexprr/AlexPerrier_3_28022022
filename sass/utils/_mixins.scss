@@ -1,0 +1,23 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin btn {
+    padding: 1.6rem 2rem;
+    border-radius: 3rem;
+    opacity: 1;
+    background: $gradient;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, .3) 0px 2px 8px 0px;
+    
+}
+
+@mixin btn--over {
+    cursor: pointer;
+    opacity: .8;
+    transition: .3s;
+    box-shadow: rgba(0, 0, 0, .8) 0px 2px 8px 0px;
+}

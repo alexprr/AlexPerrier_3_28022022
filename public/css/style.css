@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 *,
 *::before,
@@ -29,26 +30,18 @@ a {
 
 .primary-btn {
   padding: 1.6rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
   border-radius: 3rem;
-  font-weight: 500;
-  width: 220px;
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  opacity: 1;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   color: #fff;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
 }
 .primary-btn:hover {
+  cursor: pointer;
   opacity: 0.8;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-.primary-btn-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 8px 0px;
 }
 
 .header {
@@ -181,12 +174,13 @@ a {
 }
 .resto .card-container {
   display: flex;
+  width: 100ù;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 4rem;
 }
 .resto .card-container .card {
-  width: 100%;
+  flex: 1 1 auto;
   background-color: #fff;
   border-radius: 1.6rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -239,6 +233,43 @@ a {
   background-color: #99E2D0;
   top: 15px;
   right: 15px;
+}
+
+@media (min-width: 426px) {
+  .card {
+    width: 25%;
+  }
+}
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  height: 50vh;
+}
+.test .bloc-1 {
+  width: 10rem;
+  height: 10rem;
+  background-color: #f1f192;
+  position: relative;
+  z-index: 1;
+}
+.test .bloc-1:hover::after {
+  opacity: 1;
+}
+.test .bloc-1::after {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #a36fe1 0%, #782cd3 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 .background {

@@ -94,11 +94,12 @@
     }
     & .card-container {
         display: flex;
+        width: 100ù;
         flex-direction: column;
         gap: 2rem;
         margin-bottom: 4rem;
         & .card {
-            width: 100%;
+            flex: 1 1 auto;
             background-color: #fff;
             border-radius: 1.6rem;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -154,5 +155,49 @@
                 right: 15px;
             }
         } 
+    }
+}
+
+@media (min-width: 426px) {
+    .card {
+        width: 25%;
+    }
+}
+
+
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    height: 50vh;
+    & .bloc-1 {
+        width: 10rem;
+        height: 10rem;
+        background-color: rgb(241, 241, 146);
+        position: relative;
+        z-index: 1;
+        &::before {
+
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::after {
+            width: 10rem;
+            height: 10rem;
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, lighten($primary-clr, 6) 0%, darken($primary-clr,10) 100%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
     }
 }
