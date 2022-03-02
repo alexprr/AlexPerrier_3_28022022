@@ -136,13 +136,11 @@
                 &__icon {
                     align-self: center;
                     position: relative;
-                    z-index: 1;
-                    &::after {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
+                    & .fas {
+                        font-size: 4rem;
+                        color: transparent;
+                        background: linear-gradient(180deg, red, blue);
+                        -webkit-background-clip: text;
                     }
                 }
             }
@@ -211,5 +209,57 @@
 
     .resto h2 {
         margin-bottom: 2rem;
+    }
+}
+
+// LOADING SPINNER 
+.loader {
+    height: 100vh;
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background: #000;
+    z-index: 100;
+    margin: auto;
+    visibility: hidden;
+    animation: loader 3s;
+    @include flex-center;
+    &__item {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: #fff;
+        border-top: 10px solid $primary-clr;
+        border-bottom: 10px solid $secondary-clr;
+        animation: spinning-item 3s ease-in-out;
+
+    }
+}
+
+@keyframes loader {
+    0% {
+        visibility: visible;
+        opacity: 0.9;
+    }
+    70% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes spinning-item {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+        visibility: hidden;
     }
 }
