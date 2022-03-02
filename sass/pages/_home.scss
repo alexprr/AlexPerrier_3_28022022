@@ -9,6 +9,7 @@
     }
 }
 
+// HERO 
 .hero {
     display: flex;
     flex-direction: column;
@@ -31,6 +32,7 @@
     }
 }
 
+// FONCTIONNEMENT
 .guides {
     margin-top: 1.25rem;
     padding: 1rem;
@@ -88,83 +90,78 @@
     }
 }
 
+// RESTAURANT
+
 .resto {
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding: 4rem 1rem 2rem 1rem;
     background-color: #f6f6f6;
     & h2 {
         font-size: $h2;
         margin-bottom: 1rem;
     }
-    & .card-container {
+    &__container {
         display: flex;
-        width: 100%;
         flex-direction: column;
+        flex-wrap: wrap;
         gap: .8rem;
         margin-bottom: 4rem;
-        & .card {
-            background-color: #fff;
-            border-radius: 1.6rem;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            position: relative;
-            &:hover {
-                @include btn--over();
-            }
-            & .card__head {
+    }
+    &__card {
+        background-color: #fff;
+        border-radius: 1.6rem;
+        position: relative;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        &:hover {
+            @include btn--over();
+        }
+        &__head {
+            height: 180px;
+            & img {
                 width: 100%;
-                height: 180px;
-                & img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 1.6rem 1.6rem 0 0;
-                }
-            }
-            & .card__body {
-                display: flex;
-                justify-content: space-between;
-                padding: 0 1.4rem;
-                &__desc {
-                    padding: 1.6rem 0;
-                    & > * {
-                        padding-block: .1rem;
-                    }
-                    & p {
-                        margin: 0;
-                    }
-                }
-                &__icon {
-                    align-self: center;
-                    position: relative;
-                    & .fas {
-                        font-size: 4rem;
-                        color: transparent;
-                        background: linear-gradient(180deg, red, blue);
-                        -webkit-background-clip: text;
-                    }
-                }
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1.6rem 1.6rem 0 0;
             }
         }
-            & .card--new {
-                &::before {
-                content: "Nouveau";
+        &__body {
+            position: relative;
+            padding: 0 1.4rem;
+            & .far {
                 position: absolute;
-                top: 15px; right: 15px;
-                width: 100px;
-                padding: .5rem;
-                text-align: center;
-                font-weight: bold;
-                border-radius: .4rem;
-                background-color: $tertiary-clr;
-                color: darken($tertiary-clr, 40%);
+                top: 50%;
+                transform: translate(-50%);
+                right: 15px;
             }
-        } 
+        }
+        &__desc {
+            padding: 1.4rem 0;
+            & p {
+                margin: 0;
+            }
+        }
+    }
+    &__new {
+        &::before {
+            content: "Nouveau";
+            position: absolute;
+            top: 15px; right: 15px;
+            width: 100px;
+            padding: .5rem;
+            text-align: center;
+            font-weight: bold;
+            border-radius: .4rem;
+            background-color: $tertiary-clr;
+            color: darken($tertiary-clr, 40%);
+        }
     }
 }
 
+
+
 // MEDIA QUERIES 
 
-// GUIDES
+// FONCTIONNEMENT
 @media (min-width: 900px) {
     .guides__box {
         flex-direction: row;
@@ -189,16 +186,14 @@
     }
 }
 
-// RESTO CARDS
+// RESTAURANTS
 @media (min-width: 769px) {
-    .resto { padding: 2rem .5rem;}
-    .resto .card-container {
+    .resto__container {
         flex-direction: row;
-    }
-    .card {
-        width: 25%;
+        justify-content: center;
     }
 }
+
 
 // H2 TITLES 
 @media (min-width: 768px) {
@@ -227,7 +222,6 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        background-image: #fff;
         border-top: 10px solid $primary-clr;
         border-bottom: 10px solid $secondary-clr;
         animation: spinning-item 3s ease-in-out;

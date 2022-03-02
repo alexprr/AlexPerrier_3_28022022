@@ -191,7 +191,7 @@ a {
 }
 
 .resto {
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 4rem 1rem 2rem 1rem;
   background-color: #f6f6f6;
 }
@@ -199,60 +199,51 @@ a {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
-.resto .card-container {
+.resto__container {
   display: flex;
-  width: 100%;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 0.8rem;
   margin-bottom: 4rem;
 }
-.resto .card-container .card {
+.resto__card {
   background-color: #fff;
   border-radius: 1.6rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.resto .card-container .card:hover {
+.resto__card:hover {
   cursor: pointer;
   opacity: 0.8;
   transition: 0.3s;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 8px 0px;
 }
-.resto .card-container .card .card__head {
-  width: 100%;
+.resto__card__head {
   height: 180px;
 }
-.resto .card-container .card .card__head img {
+.resto__card__head img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 1.6rem 1.6rem 0 0;
 }
-.resto .card-container .card .card__body {
-  display: flex;
-  justify-content: space-between;
+.resto__card__body {
+  position: relative;
   padding: 0 1.4rem;
 }
-.resto .card-container .card .card__body__desc {
-  padding: 1.6rem 0;
+.resto__card__body .far {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  right: 15px;
 }
-.resto .card-container .card .card__body__desc > * {
-  padding-block: 0.1rem;
+.resto__card__desc {
+  padding: 1.4rem 0;
 }
-.resto .card-container .card .card__body__desc p {
+.resto__card__desc p {
   margin: 0;
 }
-.resto .card-container .card .card__body__icon {
-  align-self: center;
-  position: relative;
-}
-.resto .card-container .card .card__body__icon .fas {
-  font-size: 4rem;
-  color: transparent;
-  background: linear-gradient(180deg, red, blue);
-  -webkit-background-clip: text;
-}
-.resto .card-container .card--new::before {
+.resto__new::before {
   content: "Nouveau";
   position: absolute;
   top: 15px;
@@ -288,16 +279,9 @@ a {
   }
 }
 @media (min-width: 769px) {
-  .resto {
-    padding: 2rem 0.5rem;
-  }
-
-  .resto .card-container {
+  .resto__container {
     flex-direction: row;
-  }
-
-  .card {
-    width: 25%;
+    justify-content: center;
   }
 }
 @media (min-width: 768px) {
@@ -332,7 +316,6 @@ a {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-image: #fff;
   border-top: 10px solid #9356DC;
   border-bottom: 10px solid #FF79DA;
   animation: spinning-item 3s ease-in-out;
