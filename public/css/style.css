@@ -388,8 +388,19 @@ a {
 .palette__title {
   font-family: "Shrikhand";
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
+.palette__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menus-flex {
+  display: flex;
+  flex-direction: column;
+}
+
 .dishes {
   display: flex;
   flex-direction: column;
@@ -503,6 +514,17 @@ a {
   }
   100% {
     transform: translateX(-50px);
+  }
+}
+@media (min-width: 1200px) {
+  .menus-flex {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .starter, .dish, .desserts {
+    flex: 1;
   }
 }
 
