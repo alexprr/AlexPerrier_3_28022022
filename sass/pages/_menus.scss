@@ -54,7 +54,18 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
             box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+            &:hover {
+                & + .checkbox {
+                    animation: slide-left 0.5s ease-in-out both;
+                }
+            }
+                &__desc {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
                 &__desc > * {
                     margin: 0;
                 }
@@ -68,6 +79,22 @@
                 &__price {
                     align-self: flex-end;
                 }
+
+                &__checkbox {
+                    background-color: $tertiary-clr;
+                    position: absolute;
+                    display: none;
+                    @include flex-center;
+                    border-radius: 0 1rem 1rem 0;
+                    padding: 1.25rem;
+                    right: 0;
+                    height: 100%;
+                    
+                    & .fas {
+                        color: #fff;
+                        font-size: 2rem;
+                    }
+                }
             }
         }
     
@@ -80,3 +107,14 @@
 .order-btn .btn {
    padding: 1.2rem 3rem;
 }   
+
+// Animation Checkbox Validation
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50px);
+    }
+  }

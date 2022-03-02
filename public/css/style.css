@@ -418,7 +418,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.dishes__menu:hover + .checkbox {
+  animation: slide-left 0.5s ease-in-out both;
+}
+.dishes__menu__desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .dishes__menu__desc > * {
   margin: 0;
@@ -432,6 +441,22 @@ a {
 .dishes__menu__price {
   align-self: flex-end;
 }
+.dishes__menu__checkbox {
+  background-color: #99E2D0;
+  position: absolute;
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 1rem 1rem 0;
+  padding: 1.25rem;
+  right: 0;
+  height: 100%;
+}
+.dishes__menu__checkbox .fas {
+  color: #fff;
+  font-size: 2rem;
+}
 
 .order-btn {
   display: flex;
@@ -442,6 +467,15 @@ a {
 
 .order-btn .btn {
   padding: 1.2rem 3rem;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
