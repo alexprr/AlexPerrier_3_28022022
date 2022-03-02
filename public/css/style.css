@@ -433,7 +433,21 @@ a {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   animation: showing-menus 1s both;
 }
-.dishes__menu__desc {
+.dishes__menu:hover > .dishes__menu__checkbox {
+  animation: slide-left 0.4s;
+  transform-origin: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dishes__menu:hover > .dishes__menu__checkbox i {
+  animation: icon-rotation 0.5s;
+}
+.dishes__menu:hover > .dishes__menu__price {
+  margin-right: 5rem;
+  transition: 0.2s ease-in-out;
+}
+.dishes__menu .dishes__menu__desc {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -449,6 +463,19 @@ a {
 }
 .dishes__menu__price {
   align-self: flex-end;
+}
+.dishes__menu__checkbox {
+  background-color: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
+  position: absolute;
+  display: none;
+  height: 100%;
+  padding: 0 1rem;
+  right: 0;
+}
+.dishes__menu__checkbox i {
+  color: #fff;
+  font-size: 2rem;
 }
 
 .order-btn {
@@ -510,10 +537,18 @@ a {
 
 @keyframes slide-left {
   0% {
-    transform: translateX(0);
+    transform: scaleX(0);
   }
   100% {
-    transform: translateX(-50px);
+    transform: scaleX(-50px);
+  }
+}
+@keyframes icon-rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 @media (min-width: 1200px) {

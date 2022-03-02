@@ -64,6 +64,21 @@
             position: relative;
             box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
             animation: showing-menus 1s both;
+            &:hover {
+                & > .dishes__menu__checkbox {
+                    animation: slide-left .4s;
+                    transform-origin: right;
+                    @include flex-center();
+                }
+                & > .dishes__menu__checkbox i {
+                    animation: icon-rotation .5s;
+                }
+                & > .dishes__menu__price {
+                    margin-right: 5rem;
+                    transition: .2s ease-in-out;
+                }
+            }
+            &
                 &__desc {
                     white-space: nowrap;
                     overflow: hidden;
@@ -81,6 +96,20 @@
                 }
                 &__price {
                     align-self: flex-end;
+                }
+                &__checkbox {
+                    background-color: $tertiary-clr;
+                    border-radius: 0 1rem 1rem 0;
+                    position: absolute;
+                    display: none;
+                    height: 100%;
+                    padding: 0 1rem;
+                    right: 0;
+                    & i {
+                        color: #fff;
+                        font-size: 2rem;
+                        // display: none;
+                    }
                 }
             }
         }
@@ -119,19 +148,30 @@
 #menu-9 {animation-delay: 0.9s;}
 
 // Animation Checkbox Validation
-
 @keyframes slide-left {
     0% {
-        transform: translateX(0);
+        transform: scaleX(0);
     }
     100% {
-        transform: translateX(-50px);
+        transform: scaleX(-50px);
     }
   }
 
+// Icon rotation
+@keyframes icon-rotation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Price Menu 
+
+
 
 // MEDIA QUERIES 
-
 @media (min-width: 1200px) {
     .menus-flex {
         flex-direction: row;
