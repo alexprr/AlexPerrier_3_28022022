@@ -197,7 +197,7 @@ a {
 }
 .resto h2 {
   font-size: 1.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .resto__container {
   display: flex;
@@ -230,18 +230,41 @@ a {
 .resto__card__body {
   position: relative;
   padding: 0 1.4rem;
-}
-.resto__card__body .far {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%);
-  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .resto__card__desc {
   padding: 1.4rem 0;
 }
 .resto__card__desc p {
   margin: 0;
+}
+.resto__card__heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+}
+.resto__card__heart .heart {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 30;
+}
+.resto__card__heart .heart-full {
+  width: 30px;
+  position: absolute;
+  fill: url(#gradient);
+  stroke: none;
+}
+.resto__card__heart .heart-empty {
+  width: 30px;
+  position: relative;
+}
+.resto__card__heart .heart-empty:hover {
+  opacity: 0;
+  transition: 0.5s;
 }
 .resto__new::before {
   content: "Nouveau";

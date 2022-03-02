@@ -98,7 +98,7 @@
     background-color: #f6f6f6;
     & h2 {
         font-size: $h2;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
     &__container {
         display: flex;
@@ -127,17 +127,45 @@
         &__body {
             position: relative;
             padding: 0 1.4rem;
-            & .far {
-                position: absolute;
-                top: 50%;
-                transform: translate(-50%);
-                right: 15px;
-            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // & .far,
+            // & .fas {
+            //     position: absolute;
+            //     top: 50%;
+            //     transform: translate(-50%);
+            //     right: 15px;
+            // }
         }
         &__desc {
             padding: 1.4rem 0;
             & p {
                 margin: 0;
+            }
+        }
+        &__heart {
+            @include flex-center();
+            width: 30px;
+            & .heart {
+                cursor: pointer;
+                fill: #fff;
+                stroke: #000;
+                stroke-width: 30;
+            }
+            & .heart-full {
+                width: 30px;
+                position: absolute;
+                fill: url(#gradient);
+                stroke: none;
+            }
+            & .heart-empty {
+                width: 30px;
+                position: relative;
+                &:hover {
+                    opacity: 0;
+                    transition: .5s;
+                }
             }
         }
     }
