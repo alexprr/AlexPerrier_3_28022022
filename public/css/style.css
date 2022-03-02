@@ -420,9 +420,7 @@ a {
   justify-content: space-between;
   position: relative;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.dishes__menu:hover + .checkbox {
-  animation: slide-left 0.5s ease-in-out both;
+  animation: showing-menus 1s both;
 }
 .dishes__menu__desc {
   white-space: nowrap;
@@ -441,22 +439,6 @@ a {
 .dishes__menu__price {
   align-self: flex-end;
 }
-.dishes__menu__checkbox {
-  background-color: #99E2D0;
-  position: absolute;
-  display: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 1rem 1rem 0;
-  padding: 1.25rem;
-  right: 0;
-  height: 100%;
-}
-.dishes__menu__checkbox .fas {
-  color: #fff;
-  font-size: 2rem;
-}
 
 .order-btn {
   display: flex;
@@ -467,6 +449,52 @@ a {
 
 .order-btn .btn {
   padding: 1.2rem 3rem;
+}
+
+@keyframes showing-menus {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-0.3rem);
+  }
+}
+#menu-1 {
+  animation-delay: 0.1s;
+}
+
+#menu-2 {
+  animation-delay: 0.2s;
+}
+
+#menu-3 {
+  animation-delay: 0.3s;
+}
+
+#menu-4 {
+  animation-delay: 0.4s;
+}
+
+#menu-5 {
+  animation-delay: 0.5s;
+}
+
+#menu-6 {
+  animation-delay: 0.6s;
+}
+
+#menu-7 {
+  animation-delay: 0.7s;
+}
+
+#menu-8 {
+  animation-delay: 0.8s;
+}
+
+#menu-9 {
+  animation-delay: 0.9s;
 }
 
 @keyframes slide-left {
