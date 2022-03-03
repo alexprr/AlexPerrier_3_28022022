@@ -267,7 +267,7 @@ a {
   width: 30px;
   position: relative;
 }
-.resto__card__heart .heart-empty:hover {
+.resto__card__heart .heart-empty:active {
   opacity: 0;
   transition: 0.5s;
 }
@@ -323,6 +323,11 @@ a {
 
   .resto__link {
     width: 20%;
+  }
+
+  .resto__card__heart .heart-empty:hover {
+    opacity: 0;
+    transition: 0.5s;
   }
 }
 @media (min-width: 768px) {
