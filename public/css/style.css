@@ -162,6 +162,10 @@ a {
   transition: 0.4s;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 8px 0px;
 }
+.guides__item:hover > .guides__item__icon {
+  opacity: 1;
+  color: #9356DC;
+}
 .guides__item__circle {
   position: absolute;
   top: 50%;
@@ -181,10 +185,6 @@ a {
 .guides__item__icon {
   opacity: 0.6;
   margin-left: 2.25rem;
-}
-.guides__item__icon:hover {
-  opacity: 1;
-  color: #9356DC;
 }
 .guides__item__txt {
   font-weight: 600;

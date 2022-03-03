@@ -61,6 +61,10 @@
                 cursor: pointer;
                 transition: .4s;
                 box-shadow: rgba(0, 0, 0, .8) 0px 2px 8px 0px;
+                & > .guides__item__icon {
+                    opacity: 1;
+                    color: $primary-clr;
+                }
             }
         &__circle {
             position: absolute;
@@ -78,11 +82,7 @@
         }
         &__icon {
             opacity: .6;
-            margin-left: 2.25rem;
-            &:hover {
-                opacity: 1;
-                color: $primary-clr;
-            }  
+            margin-left: 2.25rem; 
         }
         &__txt {
             font-weight: 600;
