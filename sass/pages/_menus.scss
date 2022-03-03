@@ -102,9 +102,13 @@
                     border-radius: 0 1rem 1rem 0;
                     position: absolute;
                     display: none;
+                    width: 60px;
                     height: 100%;
                     padding: 0 1rem;
                     right: 0;
+                    &:hover {
+                        cursor: pointer;
+                    }
                     & i {
                         color: #fff;
                         font-size: 2rem;
@@ -146,6 +150,7 @@
 #menu-7 {animation-delay: 0.7s;}
 #menu-8 {animation-delay: 0.8s;}
 #menu-9 {animation-delay: 0.9s;}
+#menu-10 {animation-delay: 1s;}
 
 // Animation Checkbox Validation
 @keyframes slide-left {
@@ -153,7 +158,7 @@
         transform: scaleX(0);
     }
     100% {
-        transform: scaleX(-50px);
+        transform: scaleX(1);
     }
   }
 

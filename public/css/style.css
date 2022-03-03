@@ -493,9 +493,13 @@ a {
   border-radius: 0 1rem 1rem 0;
   position: absolute;
   display: none;
+  width: 60px;
   height: 100%;
   padding: 0 1rem;
   right: 0;
+}
+.dishes__menu__checkbox:hover {
+  cursor: pointer;
 }
 .dishes__menu__checkbox i {
   color: #fff;
@@ -559,12 +563,16 @@ a {
   animation-delay: 0.9s;
 }
 
+#menu-10 {
+  animation-delay: 1s;
+}
+
 @keyframes slide-left {
   0% {
     transform: scaleX(0);
   }
   100% {
-    transform: scaleX(-50px);
+    transform: scaleX(1);
   }
 }
 @keyframes icon-rotation {
