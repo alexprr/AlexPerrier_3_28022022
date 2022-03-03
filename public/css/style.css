@@ -206,10 +206,15 @@ a {
   gap: 0.8rem;
   margin-bottom: 4rem;
 }
+.resto__link {
+  width: 100%;
+}
 .resto__card {
   background-color: #fff;
   border-radius: 1.6rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .resto__card:hover {
@@ -305,6 +310,19 @@ a {
   .resto__container {
     flex-direction: row;
     justify-content: center;
+  }
+
+  .resto__link {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .resto__container {
+    justify-content: center;
+  }
+
+  .resto__link {
+    width: 20%;
   }
 }
 @media (min-width: 768px) {
