@@ -500,9 +500,12 @@ a {
   align-items: center;
 }
 .dishes__menu__desc {
-  white-space: nowrap;
+  overflow: hidden;
+}
+.dishes__menu__desc .text-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dishes__menu__desc > * {
   margin: 0;

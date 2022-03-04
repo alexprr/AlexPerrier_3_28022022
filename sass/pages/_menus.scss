@@ -86,9 +86,12 @@
                 }
             }
                 &__desc {
-                    white-space: nowrap;
                     overflow: hidden;
-                    text-overflow: ellipsis;
+                    & .text-ellipsis {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
                 }
                 &__desc > * {
                     margin: 0;
