@@ -238,8 +238,7 @@
         width: 20%;
     }
     .resto__card__heart .heart-empty:hover {
-        opacity: 0;
-        transition: .5s;
+        animation: btn-like .4s ease-in-out both;
     }
 }
 
@@ -274,10 +273,10 @@
         border-top: 10px solid $primary-clr;
         border-bottom: 10px solid $secondary-clr;
         animation: spinning-item 3s ease-in-out;
-
     }
 }
 
+// Animation Loading Spinner
 @keyframes loader {
     0% {
         visibility: visible;
@@ -304,5 +303,23 @@
         transform: rotate(360deg);
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+@keyframes btn-like {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: .75;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .25;
+    }
+    100% {
+        opacity: 0;
     }
 }
