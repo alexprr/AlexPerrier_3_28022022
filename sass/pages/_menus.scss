@@ -66,7 +66,7 @@
             animation: showing-menus 1s both;
             &:hover {
                 & > .dishes__menu__checkbox {
-                    animation: slide-left .4s;
+                    animation: slide-left .4s both;
                     transform-origin: right;
                     @include flex-center();
                 }
@@ -78,7 +78,13 @@
                     transition: .2s ease-in-out;
                 }
             }
-            &
+            &:not(:hover) {
+                & > .dishes__menu__checkbox {
+                    animation: slide-right .2s both;
+                    transform-origin: right;
+                    @include flex-center();
+                }
+            }
                 &__desc {
                     white-space: nowrap;
                     overflow: hidden;
@@ -161,6 +167,25 @@
         transform: scaleX(1);
     }
   }
+
+@keyframes slide-right {
+    0% {
+        transform: scaleX(100%);
+    }
+    25% {
+        transform: scaleX(75%);
+    }
+    50% {
+        transform: scaleX(50%);
+    }
+    75% {
+        transform: scaleX(25%);
+    }
+    100% {
+        transform: scaleX(0%);
+    }
+  }
+
 
 // Icon rotation
 @keyframes icon-rotation {
