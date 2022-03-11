@@ -257,6 +257,9 @@ a {
   stroke: #000;
   stroke-width: 30;
 }
+.resto__card__heart .heart--clr {
+  fill: #f6f6f6;
+}
 .resto__card__heart .heart-full {
   width: 30px;
   position: absolute;
@@ -326,7 +329,8 @@ a {
   }
 
   .resto__card__heart .heart-empty:hover {
-    animation: btn-like 0.4s ease-in-out both;
+    opacity: 0;
+    transition: 0.5s;
   }
 }
 @media (min-width: 768px) {
@@ -382,22 +386,12 @@ a {
 @keyframes spinning-item {
   0% {
     opacity: 1;
-    visibility: visible;
   }
   70% {
     opacity: 1;
   }
   100% {
     transform: rotate(360deg);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes btn-like {
-  0% {
-    opacity: 1;
-  }
-  100% {
     opacity: 0;
   }
 }
@@ -470,22 +464,29 @@ a {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   animation: showing-menus 1s both;
 }
+.dishes__menu__checkbox {
+  transition: transform 0.3s;
+  transform: scaleX(0);
+}
+.dishes__menu__checkbox i {
+  transition: transform 0.5s;
+}
 .dishes__menu:hover > .dishes__menu__checkbox {
-  animation: slide-left 0.4s both;
+  transform: scaleX(1);
   transform-origin: right;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .dishes__menu:hover > .dishes__menu__checkbox i {
-  animation: icon-rotation 0.5s;
+  transform: rotate(360deg);
 }
 .dishes__menu:hover > .dishes__menu__price {
   margin-right: 5rem;
   transition: 0.2s ease-in-out;
 }
 .dishes__menu:not(:hover) > .dishes__menu__checkbox {
-  animation: slide-right 0.2s both;
+  transform: scaleX(0);
   transform-origin: right;
   display: flex;
   justify-content: center;
@@ -599,40 +600,6 @@ a {
 
 #menu-10 {
   animation-delay: 1s;
-}
-
-@keyframes slide-left {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-@keyframes slide-right {
-  0% {
-    transform: scaleX(100%);
-  }
-  25% {
-    transform: scaleX(75%);
-  }
-  50% {
-    transform: scaleX(50%);
-  }
-  75% {
-    transform: scaleX(25%);
-  }
-  100% {
-    transform: scaleX(0%);
-  }
-}
-@keyframes icon-rotation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

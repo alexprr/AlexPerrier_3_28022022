@@ -135,13 +135,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            // & .far,
-            // & .fas {
-            //     position: absolute;
-            //     top: 50%;
-            //     transform: translate(-50%);
-            //     right: 15px;
-            // }
         }
         &__desc {
             padding: 1.4rem 0;
@@ -157,6 +150,9 @@
                 fill: #fff;
                 stroke: #000;
                 stroke-width: 30;
+            }
+            & .heart--clr {
+                fill: #f6f6f6;
             }
             & .heart-full {
                 width: 30px;
@@ -238,7 +234,8 @@
         width: 20%;
     }
     .resto__card__heart .heart-empty:hover {
-        animation: btn-like .4s ease-in-out both;
+        opacity: 0;
+        transition: .5s;
     }
 }
 
@@ -276,7 +273,10 @@
     }
 }
 
-// Animation Loading Spinner
+
+// ANIMATIONS
+
+// LOADER CONTAINER
 @keyframes loader {
     0% {
         visibility: visible;
@@ -291,35 +291,16 @@
     }
 }
 
+// LOADER ITEM
 @keyframes spinning-item {
     0% {
         opacity: 1;
-        visibility: visible;
     }
     70% {
         opacity: 1;
     }
     100% {
         transform: rotate(360deg);
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes btn-like {
-    0% {
-        opacity: 1;
-    }
-    25% {
-        opacity: .75;
-    }
-    50% {
-        opacity: .5;
-    }
-    75% {
-        opacity: .25;
-    }
-    100% {
         opacity: 0;
     }
 }

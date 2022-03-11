@@ -65,14 +65,21 @@
             position: relative;
             box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
             animation: showing-menus 1s both;
+            &__checkbox {
+                transition: transform .3s;
+                transform: scaleX(0);
+                & i {
+                    transition: transform .5s;
+                }
+            }
             &:hover {
                 & > .dishes__menu__checkbox {
-                    animation: slide-left .4s both;
+                    transform: scaleX(1);
                     transform-origin: right;
                     @include flex-center();
                 }
                 & > .dishes__menu__checkbox i {
-                    animation: icon-rotation .5s;
+                    transform: rotate(360deg);
                 }
                 & > .dishes__menu__price {
                     margin-right: 5rem;
@@ -81,7 +88,7 @@
             }
             &:not(:hover) {
                 & > .dishes__menu__checkbox {
-                    animation: slide-right .2s both;
+                    transform: scaleX(0);
                     transform-origin: right;
                     @include flex-center();
                 }
@@ -175,42 +182,3 @@
 #menu-8 {animation-delay: 0.8s;}
 #menu-9 {animation-delay: 0.9s;}
 #menu-10 {animation-delay: 1s;}
-
-// Checkbox Validation
-@keyframes slide-left {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
-  }
-
-@keyframes slide-right {
-    0% {
-        transform: scaleX(100%);
-    }
-    25% {
-        transform: scaleX(75%);
-    }
-    50% {
-        transform: scaleX(50%);
-    }
-    75% {
-        transform: scaleX(25%);
-    }
-    100% {
-        transform: scaleX(0%);
-    }
-  }
-
-
-// Icon rotation (checkbox)
-@keyframes icon-rotation {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
