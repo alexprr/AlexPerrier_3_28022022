@@ -59,6 +59,7 @@
             border-radius: 1rem;
             padding: 0 1rem;
             display: flex;
+            overflow: hidden;
             align-items: center;
             justify-content: space-between;
             position: relative;
@@ -137,7 +138,21 @@
    padding: 1.2rem 3rem;
 }   
 
-// Animation Opacity Menus 
+// MEDIA QUERIES 
+
+@media (min-width: 1200px) {
+    .menus-flex {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .starter, .dish, .desserts {flex: 1;}
+}
+
+
+// ANIMATIONS
+
+// Opacity Menus 
 @keyframes showing-menus {
     0% {
         opacity: 0;
@@ -161,7 +176,7 @@
 #menu-9 {animation-delay: 0.9s;}
 #menu-10 {animation-delay: 1s;}
 
-// Animation Checkbox Validation
+// Checkbox Validation
 @keyframes slide-left {
     0% {
         transform: scaleX(0);
@@ -190,7 +205,7 @@
   }
 
 
-// Icon rotation
+// Icon rotation (checkbox)
 @keyframes icon-rotation {
     0% {
         transform: rotate(0);
@@ -198,18 +213,4 @@
     100% {
         transform: rotate(360deg);
     }
-}
-
-// Price Menu 
-
-
-
-// MEDIA QUERIES 
-@media (min-width: 1200px) {
-    .menus-flex {
-        flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
-    }
-    .starter, .dish, .desserts {flex: 1;}
 }
