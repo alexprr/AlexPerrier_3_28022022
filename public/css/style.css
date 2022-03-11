@@ -397,15 +397,6 @@ a {
   0% {
     opacity: 1;
   }
-  25% {
-    opacity: 0.75;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.25;
-  }
   100% {
     opacity: 0;
   }
@@ -472,6 +463,7 @@ a {
   border-radius: 1rem;
   padding: 0 1rem;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -548,6 +540,17 @@ a {
   padding: 1.2rem 3rem;
 }
 
+@media (min-width: 1200px) {
+  .menus-flex {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .starter, .dish, .desserts {
+    flex: 1;
+  }
+}
 @keyframes showing-menus {
   0% {
     opacity: 0;
@@ -629,17 +632,6 @@ a {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@media (min-width: 1200px) {
-  .menus-flex {
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .starter, .dish, .desserts {
-    flex: 1;
   }
 }
 
