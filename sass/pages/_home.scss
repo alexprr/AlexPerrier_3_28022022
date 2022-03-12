@@ -164,6 +164,7 @@
                 width: 30px;
                 position: relative;
                 &:active {
+                    // Remplir le coeur lors du clic (rester enfoncé)
                     opacity: 0;
                     transition: .5s;
                 }
@@ -234,6 +235,7 @@
         width: 20%;
     }
     .resto__card__heart .heart-empty:hover {
+        // Remplir le coeur lors du passage de la souris (format desktop)
         opacity: 0;
         transition: .5s;
     }

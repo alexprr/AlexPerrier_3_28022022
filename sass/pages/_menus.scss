@@ -59,35 +59,43 @@
             border-radius: 1rem;
             padding: 0 1rem;
             display: flex;
+            // Cacher ce qui dépasse du conteneur
             overflow: hidden;
             align-items: center;
             justify-content: space-between;
             position: relative;
             box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+            // Apparition des menu avec @keyframes
             animation: showing-menus 1s both;
             &__checkbox {
+                // Animation de la checkbox avec transition
                 transition: transform .3s;
                 transform: scaleX(0);
                 & i {
+                    // Animation de l'icône dans checkbox avec transition
                     transition: transform .5s;
                 }
             }
             &:hover {
                 & > .dishes__menu__checkbox {
+                    // Apparition de la checkbox avec transition
                     transform: scaleX(1);
                     transform-origin: right;
                     @include flex-center();
                 }
                 & > .dishes__menu__checkbox i {
+                    // Rotation de l'icône avec transition
                     transform: rotate(360deg);
                 }
                 & > .dishes__menu__price {
                     margin-right: 5rem;
+                    // Décalage du prix avec transition
                     transition: .2s ease-in-out;
                 }
             }
             &:not(:hover) {
                 & > .dishes__menu__checkbox {
+                    // Disparition de la checkbox avec transition
                     transform: scaleX(0);
                     transform-origin: right;
                     @include flex-center();
@@ -135,7 +143,7 @@
             }
         }
     
-
+// Bouton Commander
 .order-btn {
     @include flex-center();
     margin-top: 2rem;
@@ -146,7 +154,6 @@
 }   
 
 // MEDIA QUERIES 
-
 @media (min-width: 1200px) {
     .menus-flex {
         flex-direction: row;
@@ -159,7 +166,7 @@
 
 // ANIMATIONS
 
-// Opacity Menus 
+// Apparition des menu avec @keyframes 
 @keyframes showing-menus {
     0% {
         opacity: 0;
@@ -171,7 +178,7 @@
     }
 }
 
-// Delay Management 
+// Gestion du délai pour chaque menu
 #menu-1 {animation-delay: 0.1s;}
 #menu-2 {animation-delay: 0.2s;}
 #menu-3 {animation-delay: 0.3s;}
